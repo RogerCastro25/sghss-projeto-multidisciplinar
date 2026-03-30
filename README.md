@@ -74,19 +74,9 @@ Perfil GitHub do aluno:
 
 Contato do aluno:
 - E-mail: rogeregaby2013@gmail.com
+- E-mail: pedrocastro.roger23@gmail.com
 
 Modelo de links para este perfil:
-- Repositorio GitHub: `https://github.com/RogerCastro25/NOME_DO_REPOSITORIO`
-- Publicacao das paginas (HTTPS): `https://rogercastro25.github.io/NOME_DO_REPOSITORIO/`
+- Repositorio GitHub: `https://rogercastro25.github.io/sghss-projeto-multidisciplinar/`
+- Publicacao das paginas (HTTPS): `https://rogercastro25.github.io/sghss-projeto-multidisciplinar/`
 
-### Como publicar no GitHub Pages
-
-1. Crie o repositório no GitHub.
-2. Envie os arquivos do projeto para a branch `main`.
-3. No GitHub, abra `Settings` > `Pages`.
-4. Em `Build and deployment`, selecione:
-- `Source`: `Deploy from a branch`
-- `Branch`: `main` e pasta `/ (root)`
-5. Salve e aguarde a geração do link público HTTPS.
-
-Observacao: depois de publicar, teste o link em aba anônima para garantir acesso sem login do GitHub.
