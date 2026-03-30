@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SGHSS | Admin</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-page="admin">
+    <div class="dashboard-layout">
+      <aside class="sidebar">
+        <h2>Administrador</h2>
+        <p id="welcomeAdm"></p>
+        <button id="logoutBtn" class="btn">Sair</button>
+      </aside>
+
+      <main class="content">
+        <header class="content-header">
+          <h1>Painel Administrativo</h1>
+        </header>
+
+        <section class="cards">
+          <article class="card">
+            <h3>Usuários</h3>
+            <strong id="admUsers">0</strong>
+          </article>
+          <article class="card">
+            <h3>Consultas</h3>
+            <strong id="admConsultas">0</strong>
+          </article>
+          <article class="card">
+            <h3>Consultas abertas</h3>
+            <strong id="admAbertas">0</strong>
+          </article>
+        </section>
+
+        <section class="panel">
+          <h2>Cadastrar usuário</h2>
+          <p class="section-subtitle">Permite criar novos pacientes e médicos para testes do sistema.</p>
+          <form id="adminCreateUserForm" class="form-inline form-admin" novalidate>
+            <input id="adminUserNome" type="text" placeholder="Nome" required />
+            <input id="adminUserEmail" type="email" placeholder="email@sghss.com" required />
+            <input id="adminUserSenha" type="password" placeholder="Senha" required />
+            <select id="adminUserTipo" required>
+              <option value="">Perfil</option>
+              <option value="paciente">Paciente</option>
+              <option value="medico">Médico</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <h2>Usuários cadastrados</h2>
+          <p class="section-subtitle">Visão geral dos perfis de acesso do sistema.</p>
+          <form class="form-inline filters" id="adminUsersFilters">
+            <select id="adminFilterTipo">
+              <option value="">Todos os perfis</option>
+              <option value="paciente">Paciente</option>
+              <option value="medico">Médico</option>
+              <option value="admin">Administrador</option>
+            </select>
+            <input id="adminFilterSearch" type="text" placeholder="Buscar por nome ou email" />
+            <button id="adminFilterClear" type="button" class="btn">Limpar</button>
+          </form>
+          <div id="adminUsersTable"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Consultas cadastradas</h2>
+          <p class="section-subtitle">Acompanhamento completo das consultas registradas no protótipo.</p>
+          <div id="adminConsultasTable"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

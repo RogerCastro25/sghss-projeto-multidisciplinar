@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SGHSS | Paciente</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-page="paciente">
+    <div class="dashboard-layout">
+      <aside class="sidebar">
+        <h2>Paciente</h2>
+        <p id="welcomePac"></p>
+        <button id="logoutBtn" class="btn">Sair</button>
+      </aside>
+
+      <main class="content">
+        <header class="content-header">
+          <h1>Dashboard do Paciente</h1>
+        </header>
+
+        <section class="cards">
+          <article class="card">
+            <h3>Total de consultas</h3>
+            <strong id="pacTotal">0</strong>
+          </article>
+          <article class="card">
+            <h3>Próxima consulta</h3>
+            <strong id="pacNext">-</strong>
+          </article>
+          <article class="card">
+            <h3>Teleatendimento</h3>
+            <p id="pacTeleStatus" class="tele-status off">● Sala indisponível</p>
+            <button id="pacTeleQuick" class="btn btn-primary" type="button">Entrar na sala</button>
+          </article>
+        </section>
+
+        <section class="panel">
+          <h2>Agendar consulta</h2>
+          <p class="section-subtitle">Selecione um médico, data/hora e informe o motivo do atendimento.</p>
+          <form id="agendarForm" class="form-inline">
+            <select id="consultaMedico" required>
+              <option value="">Selecione o médico</option>
+            </select>
+            <input id="consultaData" type="datetime-local" required />
+            <input id="consultaMotivo" type="text" placeholder="Ex.: retorno, exame, dor de cabeça" required />
+            <button type="submit" class="btn btn-primary">Agendar</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <h2>Minhas consultas</h2>
+          <p class="section-subtitle">Filtre por status e data para localizar atendimentos rapidamente.</p>
+          <form class="form-inline filters" id="pacFilters">
+            <select id="pacFilterStatus">
+              <option value="">Todos os status</option>
+              <option value="agendada">Agendada</option>
+              <option value="aguardando">Aguardando</option>
+              <option value="em-andamento">Em andamento</option>
+              <option value="encerrada">Encerrada</option>
+              <option value="cancelada">Cancelada</option>
+            </select>
+            <input id="pacFilterDate" type="date" />
+            <button id="pacFilterClear" type="button" class="btn">Limpar</button>
+          </form>
+          <div id="pacienteTable"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Histórico de consultas encerradas</h2>
+          <p class="section-subtitle">Aqui ficam registradas apenas as consultas já finalizadas.</p>
+          <p class="section-subtitle">Se o médico registrar evolução, ela aparecerá no histórico.</p>
+          <div id="pacienteHistoryTable"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

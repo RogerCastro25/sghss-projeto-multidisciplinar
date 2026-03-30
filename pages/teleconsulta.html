@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SGHSS | Teleatendimento</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-page="teleconsulta">
+    <div class="dashboard-layout">
+      <aside class="sidebar">
+        <h2>Teleatendimento</h2>
+        <p id="teleWelcome"></p>
+        <button id="logoutBtn" class="btn">Sair</button>
+      </aside>
+
+      <main class="content">
+        <header class="content-header">
+          <h1>Sala de Teleatendimento</h1>
+        </header>
+
+        <section class="panel tele-grid">
+          <article class="tele-video">
+            <h2>Vídeo</h2>
+            <div class="video-box">
+              <p>Conexão simulada ativa</p>
+            </div>
+            <div class="actions">
+              <button id="btnIniciarTele" class="btn btn-primary btn-small" type="button">Iniciar atendimento</button>
+              <button id="btnEncerrarTele" class="btn btn-small warning" type="button">Encerrar consulta</button>
+            </div>
+          </article>
+
+          <article class="tele-info">
+            <h2>Detalhes da consulta</h2>
+            <p><strong>Paciente:</strong> <span id="telePaciente">-</span></p>
+            <p><strong>Médico:</strong> <span id="teleMedico">-</span></p>
+            <p><strong>Data:</strong> <span id="teleData">-</span></p>
+            <p><strong>Motivo:</strong> <span id="teleMotivo">-</span></p>
+            <p><strong>Status:</strong> <span id="teleStatus">-</span></p>
+            <button id="btnVoltarTele" class="btn" type="button">Voltar ao dashboard</button>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

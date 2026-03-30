@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SGHSS | Médico</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-page="medico">
+    <div class="dashboard-layout">
+      <aside class="sidebar">
+        <h2>Médico</h2>
+        <p id="welcomeMed"></p>
+        <button id="logoutBtn" class="btn">Sair</button>
+      </aside>
+
+      <main class="content">
+        <header class="content-header">
+          <h1>Dashboard do Médico</h1>
+        </header>
+
+        <section class="cards">
+          <article class="card">
+            <h3>Consultas hoje</h3>
+            <strong id="medHoje">0</strong>
+          </article>
+          <article class="card">
+            <h3>Em andamento</h3>
+            <strong id="medAndamento">0</strong>
+          </article>
+          <article class="card">
+            <h3>Teleatendimento</h3>
+            <p id="medTeleStatus" class="tele-status off">● Sala indisponível</p>
+            <button id="medTeleQuick" class="btn btn-primary" type="button">Entrar na sala</button>
+          </article>
+        </section>
+
+        <section class="panel">
+          <h2>Consultas do médico</h2>
+          <p class="section-subtitle">Use a busca e os filtros para acompanhar o fluxo de atendimento.</p>
+          <form class="form-inline filters" id="medFilters">
+            <input id="medFilterSearch" type="text" placeholder="Buscar paciente por nome" />
+            <select id="medFilterStatus">
+              <option value="">Todos os status</option>
+              <option value="agendada">Agendada</option>
+              <option value="aguardando">Aguardando</option>
+              <option value="em-andamento">Em andamento</option>
+              <option value="encerrada">Encerrada</option>
+              <option value="cancelada">Cancelada</option>
+            </select>
+            <input id="medFilterDate" type="date" />
+            <button id="medFilterClear" type="button" class="btn">Limpar</button>
+          </form>
+          <div id="medicoTable"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Histórico de consultas encerradas</h2>
+          <p class="section-subtitle">Registro de atendimentos concluídos pelo médico, com evolução clínica.</p>
+          <div id="medicoHistoryTable"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

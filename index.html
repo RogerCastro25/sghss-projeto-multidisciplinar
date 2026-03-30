@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SGHSS | Login</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-page="login">
+    <main class="auth-layout">
+      <section class="auth-card">
+        <h1>SGHSS</h1>
+        <p class="subtitle">Sistema de Gestão Hospitalar e Saúde</p>
+        <p class="hint">Protótipo acadêmico para autenticação, gestão de consultas e teleatendimento.</p>
+
+        <form id="loginForm" class="form" novalidate>
+          <label for="tipo">Perfil</label>
+          <select id="tipo" required>
+            <option value="">Selecione</option>
+            <option value="paciente">Paciente</option>
+            <option value="medico">Médico</option>
+            <option value="admin">Administrador</option>
+          </select>
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="seu.email@sghss.com" required />
+
+          <label for="senha">Senha</label>
+          <input id="senha" type="password" placeholder="Digite sua senha" required />
+
+          <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+
+        <div id="alert" class="alert" aria-live="polite"></div>
+
+        <div class="access-info">
+          <h2>Acessos do sistema</h2>
+          <p class="hint">Use as credenciais abaixo para testar cada perfil.</p>
+          <p>paciente@sghss.com | 123456</p>
+          <p>medico@sghss.com | 123456</p>
+          <p>admin@sghss.com | 123456</p>
+        </div>
+
+        <div class="access-info register-box">
+          <h2>Cadastro rápido de paciente</h2>
+          <p class="hint">Para demonstração acadêmica, o cadastro cria uma conta de paciente localmente.</p>
+          <form id="registerForm" class="form" novalidate>
+            <label for="regNome">Nome completo</label>
+            <input id="regNome" type="text" placeholder="Digite seu nome" required />
+
+            <label for="regEmail">Email</label>
+            <input id="regEmail" type="email" placeholder="novo.paciente@sghss.com" required />
+
+            <label for="regSenha">Senha</label>
+            <input id="regSenha" type="password" placeholder="Crie uma senha" required />
+
+            <button type="submit" class="btn">Cadastrar paciente</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
