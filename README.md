@@ -62,7 +62,6 @@ As chaves utilizadas no navegador incluem:
 - Nao depende de backend para funcionamento local
 - Recomenda-se executar via servidor local
 
-## Publicacao e Repositorio (obrigatorio para entrega)
 
 Links deste projeto:
 
@@ -79,4 +78,3 @@ Contato do aluno:
 Modelo de links para este perfil:
 - Repositorio GitHub: `https://rogercastro25.github.io/sghss-projeto-multidisciplinar/`
 - Publicacao das paginas (HTTPS): `https://rogercastro25.github.io/sghss-projeto-multidisciplinar/`
-
